@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Usually Eslinnt prettier husky are all basic things that you need to make your project such that it will restic commmits for failed lint tests. 
 But, it depends on what framework or library you're using for your project (Example:- React/Angular/Vue), and this will decide what further dependencies you'll need to install on your project. 
 
-This is repo is completly for implementing linting on Angular Project.
+This repo is completely for implementing linting on Angular Project.
 
 ## Steps to follow:
 
