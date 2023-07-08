@@ -1,27 +1,125 @@
-# MyAngular
+# Angular Project with Eslint
 
+This Angular project has Eslint, prettier, Husky and lint-staged implemented on it such that you won't be able to commit your code until your all stashed changes in commit has passed the lint test.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
-## Development server
+## Brief Idea:
+Usually Eslinnt prettier husky are all basic things that you need to make your project such that it will restic commmits for failed lint tests. 
+But, it depends on what framework or library you're using for your project (Example:- React/Angular/Vue), and this will decide what further dependencies you'll need to install on your project. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is repo is completly for implementing linting on Angular Project.
 
-## Code scaffolding
+## Steps to follow:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1) Install eslint as dev dependency on your angular project.
 
-## Build
+    1) `npm install --save-dev eslint`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+2) Configure eslint by running. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    1) `npx eslint --init`
 
-## Running end-to-end tests
+    + Select *To check syntax, find problems, and enforce code style* for the question **how would you like Eslint to be used?**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    + Select *Standard* as option for question **which style guide you want to follow?**
 
-## Further help
+    + Select *JSON format* when asked about **which format do you want your config files to be in?**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+3) This will create an **.eslintrc.json** file with the content including the configurations for our rules.
+
+    ```
+    Copy the code from the .eslintrc.json file available in this repository and paste it inside you .eslintrc.json file
+    ````
+
+
+4) Create **.eslintignore** file in your project to ignore the config on the folders you want to avoid. (check that file in this repository)
+
+
+5) Install prettier 
+
+    `npm install --save-dev prettier`
+
+
+6) create **.prettierrc.json** and **.prettierignore** and files in your repo and add following content respectively:
+
+      ```
+      {
+          "bracketSpacing": true,
+          "semi": true,
+          "singleQuote": true,
+          "trailingComma": "all",
+          "printWidth": 80,
+          "tabWidth": 2
+        }
+      ```
+
+      ```
+      #you can copy paste your .gitignore file code here
+      ```
+
+
+7) Add following in scripts section of **package.json**
+
+    ```
+    "scripts": {
+      "lint": "ng lint"
+    }
+    ```
+
+    + install all dependencies that are required to run this command, your devdependency in package.json will contain some packages like below mentioned. (some         may vary, so do check the version compatibility)
+
+    ```
+        "devDependencies": {
+          ...
+          "eslint": "^8.40.0",
+          "@angular-eslint/schematics": "16.0.3",
+          "@typescript-eslint/eslint-plugin": "5.59.7",
+          "@angular-eslint/builder": "16.0.3",
+          "@angular-eslint/eslint-plugin": "16.0.3",
+          "@angular-eslint/eslint-plugin-template": "16.0.3",
+          "@angular-eslint/template-parser": "16.0.3",
+          "@typescript-eslint/parser": "5.59.7",
+          ...
+        }
+    ```
+
+
+8) Check the eslint rules implementation by running
+
+    1) ` npx eslint .` or `npm run lint`
+
+
+9) Install husky and lint-staged
+
+    1) `npm install --save-dev husky`
+
+    2) `npm install --save-dev lint-staged`
+
+
+10) Add below code in **package.json**
+    ```
+    "scripts": {
+       ...
+       "execute-husky": "npx husky install && npx husky add .husky/pre-commit \"npx lint-staged\""   
+       ... 
+    },
+    "lint-staged": {
+      "src/**/*.{ts,html}": "eslint ."
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    }
+    ```
+
+11) Run the command 
+
+    ` npm run execute-husky`
+
+
+
+# You are all Set! :tada:
+
