@@ -4,7 +4,7 @@ This Angular project has Eslint, prettier, Husky and lint-staged implemented on 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
 ## Brief Idea:
-Usually Eslinnt prettier husky are all basic things that you need to make your project such that it will restic commmits for failed lint tests. 
+Usually Eslinnt prettier husky are all basic things that you need to make your project such that it will restrict commmits for failed lint tests. 
 But, it depends on what framework or library you're using for your project (Example:- React/Angular/Vue), and this will decide what further dependencies you'll need to install on your project. 
 
 This repo is completely for implementing linting on Angular Project.
