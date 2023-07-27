@@ -130,3 +130,7 @@ This repo is completely for implementing linting on Angular Project.
 
 # You are all Set! :tada:
 
+## Conclusion:
+1) Make sure you have a .husky file in your project.
+2) Make sure you have typescript globally installed in your device.
+3) Make sure you check the versions of these dependency with each other. 
