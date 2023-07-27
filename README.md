@@ -1,3 +1,10 @@
+## Very Important Note: 
+```
+For this project for example we are linting typescript files and html files, 
+So it is extremly necessary that you have installed typescript globally in your project 
+because when eslint will start as soon as you commit, it will need typescript to compile ts files of your repository.
+```
+
 # Angular Project with Eslint
 
 This Angular project has Eslint, prettier, Husky and lint-staged implemented on it such that you won't be able to commit your code until your all stashed changes in commit has passed the lint test.
