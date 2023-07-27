@@ -2,7 +2,8 @@
 ```
 For this project for example we are linting typescript files and html files, 
 So it is extremly necessary that you have installed typescript globally in your project 
-because when eslint will start as soon as you commit, it will need typescript to compile ts files of your repository.
+because when eslint will start as soon as you commit, 
+it will need typescript to compile ts files of your repository.
 ```
 
 # Angular Project with Eslint
