@@ -7,7 +7,7 @@ because when eslint will start as soon as you commit, it will need typescript to
 
 # Angular Project with Eslint
 
-This Angular project has Eslint, prettier, Husky and lint-staged implemented on it such that you won't be able to commit your code until your all stashed changes in commit has passed the lint test.
+This Angular project has Eslint, prettier, Husky and lint-staged implemented on it such that you won't be able to commit your code until your all staged changes in commit has passed the lint test.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
 ## Brief Idea:
