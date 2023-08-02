@@ -38,7 +38,7 @@ This repo is completely for implementing linting on Angular Project.
 3) This will create an **.eslintrc.json** file with the content including the configurations for our rules.
 
     ```
-    Copy the code from the .eslintrc.json file available in this repository and paste it inside you .eslintrc.json file
+    Copy the code from the .eslintrc.json file available in this repository and paste it inside your .eslintrc.json file
     ````
 
 
