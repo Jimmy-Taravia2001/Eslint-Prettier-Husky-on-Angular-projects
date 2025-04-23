@@ -1,4 +1,4 @@
-## Very Important Note: 
+## Important Note: 
 ```
 For this project for example we are linting typescript files and html files, 
 So it is extremly necessary that you have installed typescript globally in your project 
